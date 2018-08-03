@@ -2,6 +2,16 @@
 
 Contains the source content for https://developer.ibm.com/datapower/blog
 
+[Victor Weng] For sample startup:
+1. cd /getting-started
+1. run docker command: `docker run -d -v $PWD/config:/drouter/config -v $PWD/local:/drouter/local -e DATAPOWER_ACCEPT_LICENSE=true   -e DATAPOWER_INTERACTIVE=true -p 5090:9090 -p 5554:5554 -p 6000-6010:8000-8010 --name datapower ibmcom/datapower`
+1. access https://localhost:5090 and login use admin/admin
+1. if need to access cli, run docker command: `docker attach datapower`
+1. in cli, type co to enter config mode, then use `web-mgmt 0.0.0.0 9090` to start webUI.
+1. if need to detach, use key-sequence `ctrl-p, ctrl-q`
+
+
+
 To write a new blog:
 
 1. If necessary, `git clone https://github.com/ibm-datapower/datapower-tutorials.git`
